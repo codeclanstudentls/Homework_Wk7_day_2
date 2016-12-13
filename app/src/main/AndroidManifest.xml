@@ -18,12 +18,13 @@
             </intent-filter>
         </activity>
         
-        <!--<activity-->
-            <!--android:name=".DisplayActivity"-->
-            <!--android:parentActivityName=".WordCountApp"-->
+        <activity
+            android:name=".DisplayActivity"
+            android:parentActivityName=".WordCountApp"
+            android:label="Number of Words are...">
             <!--android:label="@string/count_words">-->
 
-        <!--</activity>-->
+        </activity>
 
 
     </application>

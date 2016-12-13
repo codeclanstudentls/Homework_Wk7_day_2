@@ -1,5 +1,6 @@
 package com.example.user.wordcount;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 public class WordCountApp extends AppCompatActivity {
     EditText enterTextToCount;
     Button pressButton;
-    TextView displayCount;
+//    TextView displayCount;
 
     @Override
     protected void  onCreate(Bundle savedInstanceState){
@@ -22,7 +23,7 @@ public class WordCountApp extends AppCompatActivity {
 
         enterTextToCount = (EditText) findViewById(R.id.text_enter);
         pressButton = (Button) findViewById(R.id.count_words);
-        displayCount = (TextView) findViewById(R.id.display_count);
+//        displayCount = (TextView) findViewById(R.id.display_count);
 
 
         pressButton.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +33,14 @@ public class WordCountApp extends AppCompatActivity {
                 String textInput = enterTextToCount.getText().toString();
                 WordCounter wordcounter = new WordCounter();
                 int wordnumber = wordcounter.count(textInput);
-                displayCount.setText("There are " + wordnumber);
+                String wordCounter = .getWordCounter;
+//                displayCount.setText("There are " + wordnumber);
+
+                Intent intent = Intent(WorkCountApp.this, DisplayActivity.class);
+                intent.putExtra("word count", );
+
+                startActivity(intent);
+
 
 
             }
